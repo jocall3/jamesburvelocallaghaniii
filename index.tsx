@@ -45,7 +45,7 @@ The story focuses on his process of discovery, the challenges of pioneering new 
 
 const PRIMARY_ENTITY_CONTEXT = `his personal research initiatives, the institutes he founds (e.g., "The O'Callaghan Institute for Advanced Cognition"), or the global network of collaborators and advanced projects he engages with. He is not bound by a single traditional organization.`;
 
-const NUM_CHOICES_TO_GENERATE = 3;
+const NUM_CHOICES_TO_GENERATE = 20;
 const LOCAL_STORAGE_KEY = 'interactiveStory_OCallaghanAscent_v1';
 const ACTIVE_TAB_KEY = 'interactiveStory_OCallaghanAscent_activeTab_v1';
 
