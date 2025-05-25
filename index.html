@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Story Weaver: O'Callaghan's Quantum Ascent</title>
+  <link rel="stylesheet" href="index.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "@google/genai": "https://esm.sh/@google/genai@^1.0.1",
+      "marked": "https://esm.sh/marked@^15.0.12"
+    }
+  }
+  </script>
+  <script type="module" src="index.tsx"></script>
+</head>
+<body>
+  <div id="app-container">
+    <div id="left-panel">
+      <h1 id="book-title-display">O'Callaghan's Quantum Ascent</h1>
+      
+      <div id="tab-navigation" role="tablist" aria-label="Main navigation">
+        <button id="tab-chronicle" role="tab" aria-selected="true" aria-controls="panel-chronicle">Chronicle Control</button>
+        <button id="tab-chat" role="tab" aria-selected="false" aria-controls="panel-chat">Oracle Chat</button>
+      </div>
+
+      <div id="tab-panels-container">
+        <div id="panel-chronicle" role="tabpanel" aria-labelledby="tab-chronicle">
+          <div id="status-area" role="status" aria-live="polite">Welcome! Embark on a journey into the frontiers of knowledge.</div>
+          <div id="choices-section">
+            <p id="choices-label" class="choices-label-hidden">Choose the path forward:</p>
+            <div id="choices-area" role="radiogroup" aria-labelledby="choices-label">
+              <!-- AI-generated choices will appear here as buttons -->
+            </div>
+          </div>
+          <div id="action-buttons-group">
+            <button id="download-story-button" aria-label="Download the current story as an HTML file">Download Chronicle (HTML)</button>
+            <button id="download-story-text-button" aria-label="Download the current story as a Text file">Download Chronicle (Text)</button>
+            <button id="action-button" aria-label="Start New Ascent">Restart Ascent</button>
+          </div>
+        </div>
+
+        <div id="panel-chat" role="tabpanel" aria-labelledby="tab-chat" class="tab-panel-hidden">
+          <div id="chat-module">
+            <div id="chat-history" role="log" aria-live="polite">
+              <!-- Chat messages will appear here -->
+            </div>
+            <div id="chat-input-area">
+              <textarea id="chat-input" placeholder="Consult the Oracle..." aria-label="Your question for the Oracle"></textarea>
+              <button id="chat-send-button" aria-label="Send question">➤</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="story-display-panel" aria-live="polite">
+      <div id="story-content">
+        <p class="placeholder-text">The chronicle of O'Callaghan's Quantum Ascent awaits your guidance...</p>
+        <!-- Story sections will be injected here. -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
