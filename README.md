@@ -4,6 +4,30 @@
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+
+
+    heres the bash script to run the app
+   '''bash'''
+#!/bin/bash
+
+# Update and install Node.js (LTS version) via NodeSource
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Check Node.js and npm installation
+node -v
+npm -v
+
+# Navigate to your project directory (adjust as needed)
+cd ~/cool/cool
+
+# Install project dependencies
+npm install
+
+# Run the application
+npm run dev
+
 # O'Callaghan's Quantum Ascent: Forge Your Saga 🌌
 
 **Embark on an infinite odyssey of intellect and innovation. You are the architect of James Burvell O'Callaghan III's monumental journey to master the very fabric of reality, finance, and consciousness.**
