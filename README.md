@@ -8,7 +8,8 @@
 
 
     heres the bash script to run the app
-   '''bash'''
+
+'''bash'''
 #!/bin/bash
 
 # Update and install Node.js (LTS version) via NodeSource
