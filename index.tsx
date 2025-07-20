@@ -413,7 +413,7 @@ async function generateChoicesForNextStep(currentSection: StorySection) {
 
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash-preview-04-17',
+      model: 'gemini-2.5-flash',
       contents: prompt,
       config: { responseMimeType: "application/json", temperature: 0.8 }
     });
@@ -489,7 +489,7 @@ async function handleChoiceClick(choice: { text: string; consequenceContext: str
 
   try {
     const response = await ai.models.generateContent({
-        model: 'gemini-2.5-flash-preview-04-17',
+        model: 'gemini-2.5-flash',
         contents: prompt, 
         config: { temperature: 0.75, topP: 0.95, topK: 50 }
     });
@@ -799,7 +799,7 @@ async function handleThematicNarration(sectionId: string) {
 
   try {
     const response = await ai.models.generateContent({
-        model: 'gemini-2.5-flash-preview-04-17',
+        model: 'gemini-2.5-flash',
         contents: prompt, 
         config: { temperature: 0.6 }
     });
@@ -883,7 +883,7 @@ function initializeChat() {
     return;
   }
   // System instruction will be dynamic in sendMessage if needed
-  geminiChat = ai.chats.create({ model: 'gemini-2.5-flash-preview-04-17' }); 
+  geminiChat = ai.chats.create({ model: 'gemini-2.5-flash' }); 
 
   renderChatHistory(); 
   if (chatMessages.length === 0) {
@@ -928,7 +928,7 @@ ${currentStorySnapshot}`;
     if (chatMessages.length > 10) { // Recreate for very long convos to refresh context for API
         const recentHistoryForAI = chatMessages.slice(-5).map(msg => `${msg.role}: ${msg.text}`).join('\n');
         effectiveChatInstance = ai!.chats.create({ 
-            model: 'gemini-2.5-flash-preview-04-17',
+            model: 'gemini-2.5-flash',
             config: { 
                 systemInstruction: `You are the Oracle of Ascent... (shortened for brevity, use full instruction)
                 Recent Conversation: ${recentHistoryForAI}
